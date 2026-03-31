@@ -3,11 +3,11 @@ const assets = [
   './',
   './index.html',
   './manifest.json',
-  './кутия.png',
-  './монета.png',
+  './box.png',
+  './coin.png',
   './protivnic1.png',
-  './Шрек.png',
-  './тръба.png',
+  './shrek.png',
+  './truba.png',
   './sw.js'
 ];
 
