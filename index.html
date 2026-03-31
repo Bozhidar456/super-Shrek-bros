@@ -32,6 +32,16 @@
         .touch-btn:active { background: rgba(196, 211, 0, 0.6); }
         .dir-btns { display: flex; gap: 15px; }
     </style>
+    <link rel="manifest" href="manifest.json">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('sw.js')
+      .then(() => console.log("Играта е готова за работа офлайн!"))
+      .catch(err => console.log("Грешка при регистрация:", err));
+  }
+</script>
 </head>
 <body>
 
