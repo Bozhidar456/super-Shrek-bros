@@ -1,13 +1,16 @@
-const cacheName = 'v1-game-cache';
+const cacheName = 'shrek-game-v1';
 const assets = [
-  '/',
-  'index.html',
-  'style.css', // Промени името, ако твоето е различно
-  'script.js', // Промени името, ако твоето е различно
-  'icon.png'
+  './',
+  './index.html',
+  './manifest.json',
+  './кутия.png',
+  './монета.png',
+  './protivnic1.png',
+  './Шрек.png',
+  './тръба.png',
+  './sw.js'
 ];
 
-// Инсталиране и кеширане на файловете
 self.addEventListener('install', e => {
   e.waitUntil(
     caches.open(cacheName).then(cache => {
@@ -16,7 +19,6 @@ self.addEventListener('install', e => {
   );
 });
 
-// Служене на файловете офлайн
 self.addEventListener('fetch', e => {
   e.respondWith(
     caches.match(e.request).then(response => {
